@@ -13,15 +13,14 @@ odoo_version="$version.0"
 custom_addons_dir="/opt/odoo/odoo${version}-custom-addons"
 odoo_venv="/opt/odoo/odoo${version}-venv"
 
-# Directorio addons custom
 cd "$custom_addons_dir" || { echo "Directorio $custom_addons_dir no encontrado"; exit 1; }
 
 # Limpiar módulos previos
 rm -rf l10n_es_facturae_face l10n_es_facturae l10n_es_aeat l10n_es_partner \
        base_iso3166 base_bank_from_iban report_qweb_parameter report_xml \
-       account_payment_partner account_payment_mode account_tax_balance date_range
+       account_payment_partner account_payment_mode account_tax_balance date_range \
+       edi_exchange_template_oca component edi_oca component_event base_edi queue_job edi_account_oca
 
-# Clonar módulos necesarios (OCA repositorio l10n-spain y otros)
 echo "Descargando módulos base y dependencias..."
 
 git clone https://github.com/OCA/l10n-spain.git --branch $odoo_version --depth 1
@@ -54,13 +53,35 @@ git clone https://github.com/OCA/server-ux.git --branch $odoo_version --depth 1
 mv server-ux/date_range .
 rm -rf server-ux
 
-# Aplicar FIX si se desea
+# Dependencias adicionales necesarias para FACE
+
+git clone https://github.com/OCA/edi.git --branch $odoo_version --depth 1
+mv edi/edi_exchange_template_oca .
+mv edi/edi_oca .
+rm -rf edi
+
+git clone https://github.com/OCA/component.git --branch $odoo_version --depth 1
+mv component/component .
+mv component/component_event .
+rm -rf component
+
+git clone https://github.com/OCA/base_edi.git --branch $odoo_version --depth 1
+mv base_edi/base_edi .
+rm -rf base_edi
+
+git clone https://github.com/OCA/queue.git --branch $odoo_version --depth 1
+mv queue/queue_job .
+rm -rf queue
+
+git clone https://github.com/OCA/edi-account-oca.git --branch $odoo_version --depth 1
+mv edi-account-oca/edi_account_oca .
+rm -rf edi-account-oca
+
 if [ "$fixed" == "s" ]; then
     echo "Aplicando fixes al módulo l10n_es_facturae_face..."
     cp ~/auto/fixes/face_fix.xml ./l10n_es_facturae_face/data/ 2>/dev/null || echo "Fix no encontrado o no copiado."
 fi
 
-# Activar entorno virtual y instalar dependencias python
 if [ -d "$odoo_venv" ]; then
     source $odoo_venv/bin/activate
     pip install unidecode pycountry xmlsig pyOpenSSL schwifty || true
@@ -70,7 +91,6 @@ else
     exit 1
 fi
 
-# Reiniciar servicio Odoo
 systemctl restart odoo$version
 
-echo "INSTALACIÓN DE FACE (l10n_es_facturae_face) Y DEPENDENCIAS COMPLETADA CORRECTAMENTE!"
+echo "INSTALACIÓN DE FACE (l10n_es_facturae_face) Y TODAS LAS DEPENDENCIAS COMPLETADA CORRECTAMENTE!"
