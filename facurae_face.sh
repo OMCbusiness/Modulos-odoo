@@ -23,6 +23,7 @@ rm -rf l10n_es_facturae_face l10n_es_facturae l10n_es_aeat l10n_es_partner \
 
 echo "Descargando módulos base y dependencias..."
 
+# Módulos de localización
 git clone https://github.com/OCA/l10n-spain.git --branch $odoo_version --depth 1
 mv l10n-spain/l10n_es_facturae_face .
 mv l10n-spain/l10n_es_facturae .
@@ -30,58 +31,66 @@ mv l10n-spain/l10n_es_aeat .
 mv l10n-spain/l10n_es_partner .
 rm -rf l10n-spain
 
+# Archivos de datos comunitarios
 git clone https://github.com/OCA/community-data-files.git --branch $odoo_version --depth 1
 mv community-data-files/base_iso3166 .
 mv community-data-files/base_bank_from_iban .
 rm -rf community-data-files
 
+# Reporting
 git clone https://github.com/OCA/reporting-engine.git --branch $odoo_version --depth 1
 mv reporting-engine/report_qweb_parameter .
 mv reporting-engine/report_xml .
 rm -rf reporting-engine
 
+# Pagos
 git clone https://github.com/OCA/bank-payment.git --branch $odoo_version --depth 1
 mv bank-payment/account_payment_partner .
 mv bank-payment/account_payment_mode .
 rm -rf bank-payment
 
+# Informes financieros
 git clone https://github.com/OCA/account-financial-reporting.git --branch $odoo_version --depth 1
 mv account-financial-reporting/account_tax_balance .
 rm -rf account-financial-reporting
 
+# Utilidades del servidor
 git clone https://github.com/OCA/server-ux.git --branch $odoo_version --depth 1
 mv server-ux/date_range .
 rm -rf server-ux
 
-# Dependencias adicionales necesarias para FACE
+# DEPENDENCIAS ADICIONALES ACTUALIZADAS Y CORRECTAS
 
+# edi-framework: edi_oca, edi_exchange_template_oca, edi_account_oca
+git clone https://github.com/OCA/edi-framework.git --branch $odoo_version --depth 1
+mv edi-framework/edi_exchange_template_oca .
+mv edi-framework/edi_oca .
+mv edi-framework/edi_account_oca .
+rm -rf edi-framework
+
+# connector: component, component_event
+git clone https://github.com/OCA/connector.git --branch $odoo_version --depth 1
+mv connector/component .
+mv connector/component_event .
+rm -rf connector
+
+# edi: base_edi
 git clone https://github.com/OCA/edi.git --branch $odoo_version --depth 1
-mv edi/edi_exchange_template_oca .
-mv edi/edi_oca .
+mv edi/base_edi .
 rm -rf edi
 
-git clone https://github.com/OCA/component.git --branch $odoo_version --depth 1
-mv component/component .
-mv component/component_event .
-rm -rf component
-
-git clone https://github.com/OCA/base_edi.git --branch $odoo_version --depth 1
-mv base_edi/base_edi .
-rm -rf base_edi
-
+# queue: queue_job
 git clone https://github.com/OCA/queue.git --branch $odoo_version --depth 1
 mv queue/queue_job .
 rm -rf queue
 
-git clone https://github.com/OCA/edi-account-oca.git --branch $odoo_version --depth 1
-mv edi-account-oca/edi_account_oca .
-rm -rf edi-account-oca
-
+# Aplicar fixes si se solicita
 if [ "$fixed" == "s" ]; then
     echo "Aplicando fixes al módulo l10n_es_facturae_face..."
     cp ~/auto/fixes/face_fix.xml ./l10n_es_facturae_face/data/ 2>/dev/null || echo "Fix no encontrado o no copiado."
 fi
 
+# Instalar dependencias Python necesarias
 if [ -d "$odoo_venv" ]; then
     source $odoo_venv/bin/activate
     pip install unidecode pycountry xmlsig pyOpenSSL schwifty || true
@@ -91,6 +100,7 @@ else
     exit 1
 fi
 
+# Reiniciar Odoo
 systemctl restart odoo$version
 
 echo "INSTALACIÓN DE FACE (l10n_es_facturae_face) Y TODAS LAS DEPENDENCIAS COMPLETADA CORRECTAMENTE!"
