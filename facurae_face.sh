@@ -93,7 +93,7 @@ fi
 # Instalar dependencias Python necesarias
 if [ -d "$odoo_venv" ]; then
     source $odoo_venv/bin/activate
-    pip install unidecode pycountry xmlsig pyOpenSSL schwifty cachetools || true
+    pip install unidecode pycountry xmlsig pyOpenSSL schwifty cachetools PyYAML || true
     deactivate
 else
     echo "El entorno virtual de Odoo no fue encontrado en $odoo_venv"
