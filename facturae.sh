@@ -65,7 +65,7 @@ pip install unidecode
 pip install pycountry
 pip install xmlsig
 pip install pyOpenSSL
-pip install schwifty
+pip install schwifty==2024.4.0
 deactivate
 
 systemctl restart odoo$version
