@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- # Part of Odoo Module Developed by Bizople Solutions Pvt. Ltd.
-# See LICENSE file for full copyright and licensing details. -->
 <odoo>
 	<template id="template_backend_config_data" name="Dynamic Data template Backend">
 		<div class="row g-0 align-items-start h-100 theme-config-sidebar">
@@ -10,34 +8,34 @@
 			</button>
 			<ul class="nav flex-shrink-0 col-4 config-sidebar-tab-panel ">
 				<div class="w-100">
-					<h3 class="mb-2 py-3 ps-3">Theme Settings</h3>
+					<h3 class="mb-2 py-3 ps-3">Configuración del Tema</h3>
 				</div>
 				<li class="nav-item mb-1">
-					<a href="#general_settings" class="nav-link active" data-bs-toggle="tab">General Settings</a>
+					<a href="#general_settings" class="nav-link active" data-bs-toggle="tab">Ajustes Generales</a>
 				</li>
 				<li class="nav-item mb-1">
-					<a href="#theme_color_pallets" class="nav-link" data-bs-toggle="tab">Colors</a>
+					<a href="#theme_color_pallets" class="nav-link" data-bs-toggle="tab">Colores</a>
 				</li>
 				<li class="nav-item mb-1">
-					<a href="#app_drawer" class="nav-link" data-bs-toggle="tab">App Drawer</a>
+					<a href="#app_drawer" class="nav-link" data-bs-toggle="tab">Cajón de Aplicaciones</a>
 				</li>
 				<li class="nav-item mb-1">
-					<a href="#font_family" class="nav-link" data-bs-toggle="tab">Font Family</a>
+					<a href="#font_family" class="nav-link" data-bs-toggle="tab">Familia de Fuente</a>
 				</li>
 				<li class="nav-item mb-1">
-					<a href="#font_size" class="nav-link" data-bs-toggle="tab">Font Size</a>
+					<a href="#font_size" class="nav-link" data-bs-toggle="tab">Tamaño de Fuente</a>
 				</li>
 				<li class="nav-item mb-1">
-					<a href="#theme_loaders_style" class="nav-link" data-bs-toggle="tab">Loaders</a>
+					<a href="#theme_loaders_style" class="nav-link" data-bs-toggle="tab">Cargadores</a>
 				</li>
 			</ul>
 			<div class="tab-content flex-grow-1 col-8 d-flex flex-column justify-content-between h-100 config-sidebar-tab-content">
 				<div id="general_settings" class="tab-pane active">
 					<div>
-						<h3 class="p-3">General Settings</h3>
+						<h3 class="p-3">Ajustes Generales</h3>
 					</div>
 					<div class="container g-4">
-						<h5 class="py-3 ">Theme Style</h5>
+						<h5 class="py-3 ">Estilo del Tema</h5>
 						<div class="row border-style pb4 theme-style-row">
 							<div class="col-md-4 mb-3">
 								<div class="form_check_content">
@@ -46,7 +44,7 @@
 										name="theme_style" value="biz_theme_rounded"
 										t-att-checked="config_vals.theme_style == 'biz_theme_rounded'" />
 									<label class="custom-control-label" for="theme_style_rounded">
-										<img class="img img-fluid" src="/spiffy_theme_backend/static/src/image/theme-style-rounded.png" alt="Rounded Theme" />
+										<img class="img img-fluid" src="/spiffy_theme_backend/static/src/image/theme-style-rounded.png" alt="Tema Redondeado" />
 									</label>
 								</div>
 								</div>
@@ -59,7 +57,7 @@
 										name="theme_style" value="biz_theme_standard"
 										t-att-checked="config_vals.theme_style == 'biz_theme_standard'" />
 									<label class="custom-control-label" for="theme_style_standard">
-										<img class="img img-fluid" src="/spiffy_theme_backend/static/src/image/theme-style-standard.png" alt="Standard Theme" />
+										<img class="img img-fluid" src="/spiffy_theme_backend/static/src/image/theme-style-standard.png" alt="Tema Estándar" />
 									</label>
 								</div>
 								</div>
@@ -73,7 +71,7 @@
 										name="theme_style" value="biz_theme_square"
 										t-att-checked="config_vals.theme_style == 'biz_theme_square'" />
 									<label class="custom-control-label" for="theme_style_square">
-										<img class="img img-fluid" src="/spiffy_theme_backend/static/src/image/theme-style-square.png" alt="Square Theme" />
+										<img class="img img-fluid" src="/spiffy_theme_backend/static/src/image/theme-style-square.png" alt="Tema Cuadrado" />
 									</label>
 								</div>
 								</div>
@@ -81,7 +79,7 @@
 							</div>
 						</div>
 
-						<h5 class="py-3 ">Menu Position</h5>
+						<h5 class="py-3 ">Posición del Menú</h5>
 						<div class="row border-style pb4 menu-position-row">
 							<div class="col-md-6 mb-3">
 								<div class="form_check_content">
@@ -90,7 +88,7 @@
 										name="top_menu_position" value="top_menu_horizontal"
 										t-att-checked="config_vals.top_menu_position == 'top_menu_horizontal'" />
 									<label class="custom-control-label" for="top_menu_style_horizontal">
-										<img class="img img-fluid" src="/spiffy_theme_backend/static/src/image/theme-menu-horizontal.png" alt="Menu horizontal" />
+										<img class="img img-fluid" src="/spiffy_theme_backend/static/src/image/theme-menu-horizontal.png" alt="Menú Horizontal" />
 									</label>
 								</div>
 								</div>
@@ -103,7 +101,7 @@
 										name="top_menu_position" value="top_menu_vertical"
 										t-att-checked="config_vals.top_menu_position == 'top_menu_vertical'" />
 									<label class="custom-control-label" for="top_menu_style_vertical">
-										<img class="img img-fluid" src="/spiffy_theme_backend/static/src/image/theme-menu-vertical.png" alt="Menu Vertical" />
+										<img class="img img-fluid" src="/spiffy_theme_backend/static/src/image/theme-menu-vertical.png" alt="Menú Vertical" />
 									</label>
 								</div>
 								</div>
@@ -116,7 +114,7 @@
 											name="top_menu_position" value="top_menu_vertical_mini"
 											t-att-checked="config_vals.top_menu_position == 'top_menu_vertical_mini'" />
 										<label class="custom-control-label" for="top_menu_style_vertical_mini">
-											<img class="img img-fluid" src="/spiffy_theme_backend/static/src/image/theme-menu-vertical-mini.png" alt="Menu Vertical" />
+											<img class="img img-fluid" src="/spiffy_theme_backend/static/src/image/theme-menu-vertical-mini.png" alt="Menú Vertical" />
 										</label>
 									</div>
 								</div>
@@ -125,7 +123,7 @@
 									<div t-attf-class="row menu-bg-image-content ">
 										<div class="col-12 pb-3">
 											<div class="py-3">
-												<b>Header Background Image</b>
+												<b>Imagen de Fondo del Encabezado</b>
 											</div>
 											<div class="custom-file mb-3">
 												<input type="file" id="menu_bg_image"
@@ -142,14 +140,14 @@
 
 									<div t-attf-class="custom_color_config ">
 										<div class="pb-2 d-flex">
-											<div class="w-50">Background Color</div>
+											<div class="w-50">Color de Fondo</div>
 											<input type="color" class="border border-dark" id="custom_header_bg" name="Custom Background" t-att-value="config_vals.header_vertical_mini_bg_color"/>
 										</div>
 									</div>
 
 									<div t-attf-class="custom_color_config ">
 										<div class="pb-2 d-flex">
-											<div class="w-50">Text Color</div>
+											<div class="w-50">Color de Texto</div>
 											<input type="color" class="border border-dark" id="custom_header_text" name="Custom text" t-att-value="config_vals.header_vertical_mini_text_color"/>
 										</div>
 									</div>
@@ -169,10 +167,10 @@
 										</div>
 									</div>
 								</div>
-								<h5 class="pt-3 pb-0 mb-0 ms-2">Apply Menu Shape Style</h5>
+								<h5 class="pt-3 pb-0 mb-0 ms-2">Aplicar Estilo de Forma al Menú</h5>
 							</div>
 							<div t-attf-class="apply_menu_shape {{'' if config_vals.apply_menu_shape_style else 'd-none'}}">
-								<h5 t-attf-class="py-3">Menu Shape Style</h5>
+								<h5 t-attf-class="py-3">Estilo de Forma del Menú</h5>
 								<div t-attf-class="row pb4 theme-style-row">
 									<div class="col-md-4 mb-3">
 										<div class="form_check_content">
@@ -181,11 +179,11 @@
 													name="shape_style" value="biz_shape_rounded"
 													t-att-checked="config_vals.shape_style == 'biz_shape_rounded'" />
 												<label class="custom-control-label" for="shape_style_rounded">
-													<img class="img img-fluid" src="/spiffy_theme_backend/static/src/image/shape-style-rounded.png" alt="Rounded Theme" />
+													<img class="img img-fluid" src="/spiffy_theme_backend/static/src/image/shape-style-rounded.png" alt="Tema Redondeado" />
 												</label>
 											</div>
 										</div>
-										<p class="text-center mt-2 mb-0">Rounded</p>
+										<p class="text-center mt-2 mb-0">Redondeado</p>
 									</div>
 
 									<div class="col-md-4 mb-3 ps-md-0">
@@ -195,11 +193,11 @@
 													name="shape_style" value="biz_shape_circle"
 													t-att-checked="config_vals.shape_style == 'biz_shape_circle'" />
 												<label class="custom-control-label" for="shape_style_standard">
-													<img class="img img-fluid" src="/spiffy_theme_backend/static/src/image/shape-style-standard.png" alt="Standard Theme" />
+													<img class="img img-fluid" src="/spiffy_theme_backend/static/src/image/shape-style-standard.png" alt="Tema Estándar" />
 												</label>
 											</div>
 										</div>
-										<p class="text-center mt-2 mb-0">Circle</p>
+										<p class="text-center mt-2 mb-0">Círculo</p>
 									</div>
 
 									<div class="col-md-4 mb-3 ps-md-0">
@@ -209,24 +207,24 @@
 													name="shape_style" value="biz_shape_square"
 													t-att-checked="config_vals.shape_style == 'biz_shape_square'" />
 												<label class="custom-control-label" for="shape_style_square">
-													<img class="img img-fluid" src="/spiffy_theme_backend/static/src/image/shape-style-square.png" alt="Square Theme" />
+													<img class="img img-fluid" src="/spiffy_theme_backend/static/src/image/shape-style-square.png" alt="Tema Cuadrado" />
 												</label>
 											</div>
 										</div>
-										<p class="text-center mt-2 mb-0">Square</p>
+										<p class="text-center mt-2 mb-0">Cuadrado</p>
 									</div>
 								</div>
-								<h5 class="pb-3 ">Menu Shape Background Color</h5>
+								<h5 class="pb-3 ">Color de Fondo de la Forma del Menú</h5>
 								<div class="row pb4">
 									<div class="col-12">
 										<div t-attf-class="custom_color_config ">
 											<div class="pb-2 d-flex">
-												<div class="w-50">Background Color</div>
+												<div class="w-50">Color de Fondo</div>
 												<input type="color" class="border border-dark" id="menu_shape_bg" name="Menu Shape Background Color" t-att-value="config_vals.menu_shape_bg_color"/>
 											</div>
 										</div>
 										<div class="slidecontainer col-12 mt-3 d-flex align-items-center">
-											<div class="text-nowrap me-2 w-50">Background Color Opacity</div>
+											<div class="text-nowrap me-2 w-50">Opacidad del Color de Fondo</div>
 											<input type="range" min="0.1" max="1" step="0.1" t-att-value="config_vals.menu_shape_bg_color_opacity" class="slider" id="menu_shape_bg_color_opacity"/>
 										</div>
 									</div>
@@ -234,7 +232,7 @@
 							</div>
 						</div>
 
-						<h5 class="py-3 ">Chatter Position</h5>
+						<h5 class="py-3 ">Posición del Chatter</h5>
 						<div class="row border-style pb4 chatter-style-row">
 							<div class="col-md-6 mb-3">
 								<div class="form_check_content">
@@ -243,7 +241,7 @@
 										name="chatter_position" value="chatter_right"
 										t-att-checked="config_vals.chatter_position == 'chatter_right'" />
 									<label class="custom-control-label" data-icon="VtGdhRvADaS" for="chatter_style_right">
-										<img class="img img-fluid" src="/spiffy_theme_backend/static/src/image/theme-chatter-right.png" alt="Chatter Right" />
+										<img class="img img-fluid" src="/spiffy_theme_backend/static/src/image/theme-chatter-right.png" alt="Chatter a la Derecha" />
 									</label>
 								</div>
 								</div>
@@ -256,7 +254,7 @@
 										name="chatter_position" value="chatter_bottom"
 										t-att-checked="config_vals.chatter_position == 'chatter_bottom'" />
 									<label class="custom-control-label" for="chatter_style_bottom">
-										<img class="img img-fluid" src="/spiffy_theme_backend/static/src/image/theme-chatter-bottom.png" alt="Chatter Bottom" />
+										<img class="img img-fluid" src="/spiffy_theme_backend/static/src/image/theme-chatter-bottom.png" alt="Chatter Abajo" />
 									</label>
 								</div>
 								</div>
@@ -264,7 +262,7 @@
 							</div>
 						</div>
 
-						<h5 class="py-3 ">List View Density</h5>
+						<h5 class="py-3 ">Densidad de la Vista de Lista</h5>
 						<div class="row border-style pb4 list-density-row">
 							<div class="col-md-6 mb-3">
 								<div class="form_check_content h-100">
@@ -272,8 +270,8 @@
 										<input type="radio" class="form-check-input" id="list_comfortable"
 											name="list_view_density" value="list_comfortable"
 											t-att-checked="config_vals.list_view_density == 'list_comfortable'" />
-										<label class="custom-control-label" for="list_comfortable" title="Comfortable">
-											<img class="img img-fluid" src="/spiffy_theme_backend/static/src/image/list_comfortable.png" alt="List Comfortable" />
+										<label class="custom-control-label" for="list_comfortable" title="Cómodo">
+											<img class="img img-fluid" src="/spiffy_theme_backend/static/src/image/list_comfortable.png" alt="Lista Cómoda" />
 										</label>
 									</div>
 								</div>
@@ -284,15 +282,15 @@
 										<input type="radio" class="form-check-input" id="list_compact"
 											name="list_view_density" value="list_compact"
 											t-att-checked="config_vals.list_view_density == 'list_compact'" />
-										<label class="custom-control-label" for="list_compact" title="Compact">
-											<img class="img img-fluid" src="/spiffy_theme_backend/static/src/image/list_compact.png" alt="List Compact" />
+										<label class="custom-control-label" for="list_compact" title="Compacto">
+											<img class="img img-fluid" src="/spiffy_theme_backend/static/src/image/list_compact.png" alt="Lista Compacta" />
 										</label>
 									</div>
 								</div>
 							</div>
 						</div>
 		
-						<h5 class="py-3 ">Input Style</h5>
+						<h5 class="py-3 ">Estilo de Entrada</h5>
 						<div class="row border-style pb4 form-mode-row">
 							<div class="col-md-4 mb-3">
 								<div class="form_check_content h-100">
@@ -300,8 +298,8 @@
 										<input type="radio" class="form-check-input" id="input_borderless"
 											name="input_style" value="input_borderless"
 											t-att-checked="config_vals.input_style == 'input_borderless'" />
-										<label class="custom-control-label" for="input_borderless" title="Borderless">
-											<img class="img img-fluid" src="/spiffy_theme_backend/static/src/image/input-style-borderless.png" alt="Borderless" />
+										<label class="custom-control-label" for="input_borderless" title="Sin Bordes">
+											<img class="img img-fluid" src="/spiffy_theme_backend/static/src/image/input-style-borderless.png" alt="Sin Bordes" />
 										</label>
 									</div>
 								</div>
@@ -312,8 +310,8 @@
 										<input type="radio" class="form-check-input" id="input_bottom_border"
 											name="input_style" value="input_bottom_border"
 											t-att-checked="config_vals.input_style == 'input_bottom_border'" />
-										<label class="custom-control-label" for="input_bottom_border" title="Border Bottom">
-											<img class="img img-fluid" src="/spiffy_theme_backend/static/src/image/input-style-bottom-border.png" alt="Border Bottom" />
+										<label class="custom-control-label" for="input_bottom_border" title="Borde Inferior">
+											<img class="img img-fluid" src="/spiffy_theme_backend/static/src/image/input-style-bottom-border.png" alt="Borde Inferior" />
 										</label>
 									</div>
 								</div>
@@ -324,15 +322,15 @@
 										<input type="radio" class="form-check-input" id="input_bordered"
 											name="input_style" value="input_bordered"
 											t-att-checked="config_vals.input_style == 'input_bordered'" />
-										<label class="custom-control-label" for="input_bordered" title="Bordered">
-											<img class="img img-fluid" src="/spiffy_theme_backend/static/src/image/input-style-bordered.png" alt="Bordered" />
+										<label class="custom-control-label" for="input_bordered" title="Con Bordes">
+											<img class="img img-fluid" src="/spiffy_theme_backend/static/src/image/input-style-bordered.png" alt="Con Bordes" />
 										</label>
 									</div>
 								</div>
 							</div>
 						</div>
 
-						<h5 class="py-3 ">List/Tree view Sticky Header and Footer</h5>
+						<h5 class="py-3 ">Encabezado y Pie de Página Fijos en Vista de Lista/Árbol</h5>
 						<div class="row border-style pb4 list-sticky-header-row">
 							<div class="col-12 mb-3">
 								<div class="form-switch p-0 mb-3">
@@ -343,18 +341,18 @@
 							</div>
 						</div>
 
-						<h5 class="py-3 ">Tree Form Split View</h5>
+						<h5 class="py-3 ">Vista Dividida de Formulario de Árbol</h5>
 						<div class="row border-style pb4 tree-form-split-row">
 							<div class="col-12 mb-3">
 								<div class="form-switch p-0 mb-3">
 									<input type="checkbox" class="form-check-input" id="tree_form_split_view"
 										t-att-checked="config_vals.tree_form_split_view" />
-									<label class="form-check-label" for="tree_form_split_view">Use Split view ?</label>
+									<label class="form-check-label" for="tree_form_split_view">¿Usar vista dividida?</label>
 								</div>
 							</div>
 						</div>
 
-						<h5 class="py-3 ">Show Attachments in List View</h5>
+						<h5 class="py-3 ">Mostrar Archivos Adjuntos en la Vista de Lista</h5>
 						<div class="row border-style pb4 show-attach-row">
 							<div class="col-12 mb-3">
 								<div class="form-switch p-0 mb-3">
@@ -365,7 +363,7 @@
 							</div>
 						</div>
 
-						<h5 class="py-3">Tab Styles</h5>
+						<h5 class="py-3">Estilos de Pestañas</h5>
 						<div class="row border-style pb4 tab-style-row">
 							<div class="col-md-6 mb-3">
 								<div class="form_check_content">
@@ -425,15 +423,15 @@
 							</div>
 						</div>
 
-						<h5 class="py-3">Checkbox Styles</h5>
+						<h5 class="py-3">Estilos de Casillas de Verificación</h5>
 						<div class="row border-style pb4 checkbox-style-row">
 							<div class="col-12 mb-3  ">
 								<div class="row mx-3 g-0 mb-2">
 									<div class="offset-2 col-5">
-										<h4 class="d-flex justify-content-center">Active</h4>
+										<h4 class="d-flex justify-content-center">Activo</h4>
 									</div>
 									<div class="col-5">
-										<h4 class="d-flex justify-content-center">Deactive</h4>
+										<h4 class="d-flex justify-content-center">Desactivado</h4>
 									</div>
 								</div>
 								<div class="col-12 mb-3 me-0 custom-control custom-radio custom-control-inline  form-check box-shadow">
@@ -505,15 +503,15 @@
 							</div>
 						</div>
 
-						<h5 class="py-3">Radio Styles</h5>
+						<h5 class="py-3">Estilos de Botones de Radio</h5>
 						<div class="row border-style pb4 radio-style-row">
 							<div class="col-12 mb-3">
 								<div class="row mx-3 g-0 mb-2">
 									<div class="offset-2 col-5">
-										<h4 class="d-flex justify-content-center">Active</h4>
+										<h4 class="d-flex justify-content-center">Activo</h4>
 									</div>
 									<div class="col-5">
-										<h4 class="d-flex justify-content-center">Deactive</h4>
+										<h4 class="d-flex justify-content-center">Desactivado</h4>
 									</div>
 								</div>
 								<div class="col-12 mb-3 me-0 custom-control custom-radio custom-control-inline  form-check box-shadow">
@@ -580,7 +578,7 @@
 							</div>
 						</div>
 
-						<h5 class="py-3">Popup Animation</h5>
+						<h5 class="py-3">Animación de Ventana Emergente</h5>
 						<div class="row border-style pb4 popup-animate-style-row">
 							<div class="col-md-6 mb-3">
 								<div class="form_check_content">
@@ -588,7 +586,7 @@
 									<input type="radio" class="form-check-input" id="popup_style_1" name="popup"
 										value="popup_style_1" t-att-checked="config_vals.popup == 'popup_style_1'" />
 									<label class="custom-control-label" for="popup_style_1">
-										<span class="text-style-design">Fade</span>	
+										<span class="text-style-design">Desvanecer</span>	
 									</label>
 								</div>
 								</div>
@@ -600,7 +598,7 @@
 									<input type="radio" class="form-check-input" id="popup_style_2" name="popup"
 										value="popup_style_2" t-att-checked="config_vals.popup == 'popup_style_2'" />
 									<label class="custom-control-label" for="popup_style_2">
-										<span class="text-style-design">Vertical Flip</span>	
+										<span class="text-style-design">Volteo Vertical</span>	
 									</label>
 								</div>
 								</div>
@@ -612,7 +610,7 @@
 									<input type="radio" class="form-check-input" id="popup_style_3" name="popup"
 										value="popup_style_3" t-att-checked="config_vals.popup == 'popup_style_3'" />
 									<label class="custom-control-label" for="popup_style_3">
-										<span class="text-style-design">BounceIn</span>	
+										<span class="text-style-design">Rebotar</span>	
 									</label>
 								</div>
 								</div>
@@ -624,7 +622,7 @@
 									<input type="radio" class="form-check-input" id="popup_style_4" name="popup"
 										value="popup_style_4" t-att-checked="config_vals.popup == 'popup_style_4'" />
 									<label class="custom-control-label" for="popup_style_4">
-										<span class="text-style-design">Shrink</span>
+										<span class="text-style-design">Encoger</span>
 									</label>
 								</div>
 								</div>
@@ -632,7 +630,7 @@
 							</div>
 						</div>
 
-						<h5 class="py-3">Separator Styles</h5>
+						<h5 class="py-3">Estilos de Separadores</h5>
 						<div class="row border-style pb4 separator-styles-row">
 							<div class="col-md-6 mb-3">
 								<div class="form_check_content">
@@ -641,7 +639,7 @@
 										value="separator_style_1"
 										t-att-checked="config_vals.separator == 'separator_style_1'" />
 									<label class="custom-control-label flex-fill" for="separator_style_1">
-										<img class="img img-fluid" src="/spiffy_theme_backend/static/src/image/theme-separator-style1.png" alt="Separator 1" />
+										<img class="img img-fluid" src="/spiffy_theme_backend/static/src/image/theme-separator-style1.png" alt="Separador 1" />
 									</label>
 								</div>
 								</div>
@@ -654,7 +652,7 @@
 										value="separator_style_2"
 										t-att-checked="config_vals.separator == 'separator_style_2'" />
 									<label class="custom-control-label flex-fill" for="separator_style_2">
-										<img class="img img-fluid" src="/spiffy_theme_backend/static/src/image/theme-separator-style2.png" alt="Separator 2" />
+										<img class="img img-fluid" src="/spiffy_theme_backend/static/src/image/theme-separator-style2.png" alt="Separador 2" />
 									</label>
 								</div>
 								</div>
@@ -666,7 +664,7 @@
 										value="separator_style_3"
 										t-att-checked="config_vals.separator == 'separator_style_3'" />
 									<label class="custom-control-label flex-fill" for="separator_style_3">
-										<img class="img img-fluid" src="/spiffy_theme_backend/static/src/image/theme-separator-style3.png" alt="Separator 3" />
+										<img class="img img-fluid" src="/spiffy_theme_backend/static/src/image/theme-separator-style3.png" alt="Separador 3" />
 									</label>
 								</div>
 								</div>
@@ -679,7 +677,7 @@
 										value="separator_style_4"
 										t-att-checked="config_vals.separator == 'separator_style_4'" />
 									<label class="custom-control-label flex-fill" for="separator_style_4">
-										<img class="img img-fluid" src="/spiffy_theme_backend/static/src/image/theme-separator-style4.png" alt="Separator 4" />
+										<img class="img img-fluid" src="/spiffy_theme_backend/static/src/image/theme-separator-style4.png" alt="Separador 4" />
 									</label>
 								</div>
 								</div>
@@ -691,17 +689,17 @@
 
 				<div id="app_drawer" class="tab-pane">
 					<div>
-						<h3 class="mb-3 py-3 ps-3">App Drawer</h3>
+						<h3 class="mb-3 py-3 ps-3">Cajón de Aplicaciones</h3>
 					</div>
 					<div class="container g-4">
-						<h5 class="py-3">Color Combinations</h5>
+						<h5 class="py-3">Combinaciones de Colores</h5>
 						<div class="row pb4">
 							<div class="col-12">
 								<div class="form-switch p-0 mb-3">
 									<input type="checkbox" class="form-check-input" id="use_custom_drawer_color"
 										t-att-checked="config_vals.use_custom_drawer_color" />
-									<label class="form-check-label" for="use_custom_drawer_color">Set Your Own Drawer
-										Colors</label>
+									<label class="form-check-label" for="use_custom_drawer_color">Configura tus Propios Colores del Cajón
+										</label>
 								</div>
 							</div>
 						</div>
@@ -839,11 +837,11 @@
 
 						<div t-attf-class="custom_color_config border-bottom {{'' if config_vals.use_custom_drawer_color else 'd-none'}}">
 							<div class="pb-2 d-flex">
-								<div class="w-50">Background Color</div>
+								<div class="w-50">Color de Fondo</div>
 								<input type="color" class=" border border-dark" id="custom_drawer_bg" name="Custom background" t-att-value="config_vals.appdrawer_custom_bg_color"/>
 							</div>
 							<div class="pb-2 d-flex">
-								<div class="w-50">Text Color</div>
+								<div class="w-50">Color de Texto</div>
 								<input type="color" class=" border border-dark" id="custom_drawer_text" name="Custom text" t-att-value="config_vals.appdrawer_custom_text_color"/>
 							</div>
 						</div>
@@ -852,14 +850,14 @@
 							<div class="form-switch p-0">
 								<input type="checkbox" class="form-check-input" id="apply_light_bg" name="example"
 									t-att-checked="config_vals.apply_light_bg_img" />
-								<label class="form-check-label" for="apply_light_bg">Apply Background Image</label>
+								<label class="form-check-label" for="apply_light_bg">Aplicar Imagen de Fondo</label>
 							</div>
 						</div>
 
 						<div t-attf-class="row app-drawer-bg-image-content {{'' if config_vals.apply_light_bg_img else 'd-none'}}">
 							<div class="col-12 pb-3">
 								<div class="pb-3">
-									<b>Body Image</b>
+									<b>Imagen de Cuerpo</b>
 								</div>
 								<div class="custom-file mb-3">
 									<input type="file" id="light_bg_image"
@@ -878,7 +876,7 @@
 
 				<div id="font_family" class="tab-pane">
 					<div>
-						<h3 class="mb-3 py-3 ps-3">Font Family</h3>
+						<h3 class="mb-3 py-3 ps-3">Familia de Fuente</h3>
 					</div>
 					<div class="container g-4">
 						<div class="font_family mb-3">
@@ -1039,7 +1037,6 @@
 										</div>
 									</div>
 								</div>
-								<!-- ARABIC FONTS -->
 								<div class="col-md-6 mb-3 ps-md-0">
 									<div class="form_check_content">
 										<div class="form-check">
@@ -1083,7 +1080,7 @@
 
 				<div id="font_size" class="tab-pane">
 					<div>
-						<h3 class="mb-3 py-3 ps-3">Font Size</h3>
+						<h3 class="mb-3 py-3 ps-3">Tamaño de Fuente</h3>
 					</div>
 					<div class="container px-0">
 						<div class="font_size mb-3">
@@ -1094,7 +1091,7 @@
 										<input type="radio" class="form-check-input" id="font_size_1" name="font_size"
 											value="font_small" t-att-checked="config_vals.font_size == 'font_small'" />
 										<label class="custom-control-label" for="font_size_1">
-											<span class="text-style-design">Small</span>
+											<span class="text-style-design">Pequeño</span>
 										</label>
 									</div>
 									</div>
@@ -1106,7 +1103,7 @@
 										<input type="radio" class="form-check-input" id="font_size_2" name="font_size"
 											value="font_medium" t-att-checked="config_vals.font_size == 'font_medium'" />
 										<label class="custom-control-label" for="font_size_2">
-											<span class="text-style-design">Medium</span>
+											<span class="text-style-design">Mediano</span>
 										</label>
 									</div>
 									</div>
@@ -1118,7 +1115,7 @@
 										<input type="radio" class="form-check-input" id="font_size_3" name="font_size"
 											value="font_large" t-att-checked="config_vals.font_size == 'font_large'" />
 										<label class="custom-control-label" for="font_size_3">
-											<span class="text-style-design">Large</span>
+											<span class="text-style-design">Grande</span>
 										</label>
 									</div>
 									</div>
@@ -1131,13 +1128,13 @@
 
 				<div id="theme_color_pallets" class="tab-pane">
 					<div>
-						<h3 class="mb-3 py-3 ps-3">Colors</h3>
+						<h3 class="mb-3 py-3 ps-3">Colores</h3>
 					</div>
 					<div class="container g-4">
 						<div class="form-switch p-0 mb-3">
 							<input type="checkbox" class="form-check-input" id="use_custom_color_config"
 								t-att-checked="config_vals.use_custom_colors" />
-							<label class="form-check-label" for="use_custom_color_config">Set Your Own Colors</label>
+							<label class="form-check-label" for="use_custom_color_config">Establecer tus Propios Colores</label>
 						</div>
 						<div t-attf-class="predefined_color_pallets mb-3 {{'d-none' if config_vals.use_custom_colors else none}}">
 							<div class="row m-0">
@@ -1269,16 +1266,14 @@
 								</div>
 							</div>
 						</div>
-						<!-- set custom colors -->
 						<div t-attf-class="custom_color_config {{'' if config_vals.use_custom_colors else 'd-none'}}">
-							<!-- primary -->
 							<div class="col-12 pb-3 ps-md-0">
 								<div class="pb-2 d-flex">
-									<div class="w-50">Primary Color</div>
+									<div class="w-50">Color Primario</div>
 									<input type="color" class="primary_bg_color border border-dark" id="primary_bg" name="Primary background" t-att-value="config_vals.light_primary_bg_color"/>
 								</div>
 								<div class="pb-2 d-flex">
-									<div class="w-50">Text Color</div>
+									<div class="w-50">Color de Texto</div>
 									<input type="color" class="primary_text_color border border-dark" id="primary_text" name="Primary text" t-att-value="config_vals.light_primary_text_color"/>
 								</div>
 							</div>
@@ -1288,7 +1283,7 @@
 
 				<div id="theme_loaders_style" class="tab-pane">
 					<div>
-						<h3 class="mb-3 py-3 ps-3">Choose your loader</h3>
+						<h3 class="mb-3 py-3 ps-3">Elige tu cargador</h3>
 					</div>
 					<div class="container g-4 loader_style mb-3 ps-3">
 						<div class="row m-0">
@@ -1437,9 +1432,9 @@
 				</div>
 
 				<div class="d-flex justify-content-center py-3 discard_button_style">
-					<a href="#" class="btn btn-primary selected_value border-0 m-0 btn-block w-50 mx-2" data-dismiss="modal">Apply</a>
+					<a href="#" class="btn btn-primary selected_value border-0 m-0 btn-block w-50 mx-2" data-dismiss="modal">Aplicar</a>
 
-					<a href="#" class="btn btn-primary backend_configurator_close border-0 m-0 btn-block w-50 mx-2" data-dismiss="modal">Discard</a>
+					<a href="#" class="btn btn-primary backend_configurator_close border-0 m-0 btn-block w-50 mx-2" data-dismiss="modal">Descartar</a>
 				</div>
 			</div>
 		</div>
