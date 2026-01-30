@@ -1,0 +1,43 @@
+// -*- coding: utf-8 -*-
+// Developed by Bizople Solutions Pvt. Ltd.
+// See LICENSE file for full copyright and licensing details
+
+body.o_web_client {
+    // Apply loader styles for all 10 variations
+    @for $i from 1 through 10 {
+        &.loader_style_#{$i} {
+            // Block UI Loader
+            .o_blockUI .o_spinner {
+                height: 100px !important;
+
+                img {
+                    content: url("/spiffy_theme_backend/static/src/image/loader_#{$i}.gif") !important;
+                    animation: none !important;
+                    max-width: 90px;
+                    max-height: 90px;
+                }
+            }
+
+            // BI Loader
+            .bi_loader {
+                content: url("/spiffy_theme_backend/static/src/image/loader_#{$i}.gif") !important;
+                animation: none !important;
+                max-width: 50px;
+                max-height: 50px;
+                z-index: 10500;
+                position: fixed;
+                top: 48%;
+                right: 50%;
+                transform: translate(50%, -48%);
+            }
+        }
+    }
+
+    // Common loader style
+    .loader_style {
+        .custom-control-label::after,
+        .custom-control-label::before {
+            top: 38%;
+        }
+    }
+}
